@@ -8,7 +8,6 @@ import java.io.FileNotFoundException;
 public class GameController {
   private Player player;
   private GameScene[] scenes;
-  private SceneSelector sceneSelector;
   private int currentScene;
 
   public GameController(String playerName, int numOfScenes, Context context)
@@ -23,6 +22,7 @@ public class GameController {
   }
 
   public int[] changePlayerStats(int choice) {
+    // TODO: Проигрыш при макс/мин стате
     int[] statsChange;
     if (choice == 1) {
       statsChange = scenes[currentScene].getChoice1Effects();
@@ -39,7 +39,15 @@ public class GameController {
   public GameScene changeScene() {
     try{
       currentScene++;
-      if (currentScene == 10) {
+
+      boolean isLose = false;
+      for (int stat : player.getStats()) {
+        if (stat >= 10 || stat <= 0) {
+          isLose = true;
+        }
+      }
+
+      if (currentScene == 10 && isLose) {
         return null;
       }
       return scenes[currentScene];
@@ -51,6 +59,7 @@ public class GameController {
   public Intent startEnding(Context context) {
     Intent intent = new Intent(context, EndingActivity.class);
     intent.putExtra("playerInstance", player);
+    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
     return intent;
   }
 

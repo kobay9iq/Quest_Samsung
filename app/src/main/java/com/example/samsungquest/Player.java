@@ -22,8 +22,20 @@ public class Player implements Serializable {
   }
 
   public void changeStats(int[] stats) {
-    gold += stats[0];
-    reputation += stats[1];
-    population += stats[3];
+    int[] tempStats = {gold, reputation, population};
+
+    for (int i = 0; i != tempStats.length; i++) {
+      if (stats[i] + tempStats[i] <= 0) {
+        tempStats[i] = 0;
+      } else if (stats[i] + tempStats[i] > 10) {
+        tempStats[i] = 10;
+      } else if (stats[i] + tempStats[i] <= 10) {
+        tempStats[i] += stats[i];
+        }
+      }
+
+    gold = tempStats[0];
+    reputation = tempStats[1];
+    population = tempStats[2];
   }
 }

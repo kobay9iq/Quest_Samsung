@@ -1,0 +1,131 @@
+<resources>
+  <string-array name="scene1">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene2">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene3">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene4">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene5">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene6">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene7">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene8">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene9">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene10">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene11">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene12">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene13">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene14">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene15">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene16">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene17">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene18">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene19">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="scene20">
+    <item>Контекст</item>
+    <item>Первый выбор</item>
+    <item>Второй выбор</item>
+  </string-array>
+
+  <string-array name="ends">
+    <item>Кончилось золото</item>
+    <item>Кончилась вера в вас</item>
+    <item>Кончились люди в королевстве</item>
+    <item>Много золота - вы сошли с ума</item>
+    <item>Люди распяли вас как бога</item>
+    <item>Людей слишком много - не хватает домов, началась гражданская война</item>
+    <item>Вы стабильный и хороший король</item>
+  </string-array>
+</resources>

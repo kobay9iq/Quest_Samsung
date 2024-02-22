@@ -34,9 +34,10 @@ public class SceneSelector {
       Drawable drawable;
 
 
-      int drawId = resources.getIdentifier((sceneNum + 1) + "scene", "drawable", packageName);
+      int drawId = resources.getIdentifier("scene" + (sceneNum + 1), "drawable", packageName);
       // возможно, надо добавить "@strings/"
-      int strId = resources.getIdentifier((sceneNum+1) + "scene", "array", packageName);
+      // и поменять "array" на "strings" (или перетащить массивы строк в arrays.xml)
+      int strId = resources.getIdentifier( "scene" + (sceneNum+1), "array", packageName);
 
       if (strId != 0 && drawId != 0 && json != null) {
         drawable = ResourcesCompat.getDrawable(resources, drawId, null);

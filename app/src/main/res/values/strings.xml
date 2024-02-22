@@ -8,28 +8,5 @@
   <string name="goldIndicator">Золото\n</string>
   <string name="reputationIndicator">Любовь народа\n</string>
   <string name="populationIndicator">Население\n</string>
-
-
-  <string-array name="scene1">
-    <item>Контекст</item>
-    <item>Первый выбор</item>
-    <item>Второй выбор</item>
-  </string-array>
-
-  <string-array name="scene2">
-    <item>Контекст</item>
-    <item>Первый выбор</item>
-    <item>Второй выбор</item>
-  </string-array>
-
-
-  <string-array name="ends">
-    <item></item>
-    <item></item>
-    <item></item>
-    <item></item>
-    <item></item>
-  </string-array>
-
-
+  <string name="endingAppeal">Мой король, |...</string>
 </resources>
