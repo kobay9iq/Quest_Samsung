@@ -1,6 +1,8 @@
 package com.example.samsungquest;
 
-public class Player {
+import java.io.Serializable;
+
+public class Player implements Serializable {
   private final String name;
   private int gold = 4;
   private int reputation = 2;
@@ -14,27 +16,14 @@ public class Player {
     return name;
   }
 
-  public int getGold() {
-    return gold;
+  public int[] getStats() {
+    int[] stats = {gold, reputation, population};
+    return stats;
   }
 
-  public void changeGold(int amount) {
-    this.gold += amount;
-  }
-
-  public int getReputation() {
-    return reputation;
-  }
-
-  public void changeReputation(int amount) {
-    this.reputation += amount;
-  }
-
-  public int getPopulation() {
-    return population;
-  }
-
-  public void changePopulation(int amount) {
-    this.population += amount;
+  public void changeStats(int[] stats) {
+    gold += stats[0];
+    reputation += stats[1];
+    population += stats[3];
   }
 }
