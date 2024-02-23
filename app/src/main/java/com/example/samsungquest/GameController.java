@@ -47,7 +47,7 @@ public class GameController {
         }
       }
 
-      if (currentScene == 10 && isLose) {
+      if (currentScene == 10 || isLose) {
         return null;
       }
       return scenes[currentScene];

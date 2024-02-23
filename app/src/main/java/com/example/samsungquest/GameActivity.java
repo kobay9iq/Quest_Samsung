@@ -61,9 +61,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     binding.sceneImage.setImageDrawable(scene.getPicture());
     binding.sceneText.setText(scene.getDescription());
 
-    binding.goldIndicator.setText(R.string.goldIndicator + playerStat[0]);
-    binding.reputationIndicator.setText(R.string.reputationIndicator + playerStat[1]);
-    binding.populationIndicator.setText(R.string.populationIndicator + playerStat[2]);
+    binding.goldIndicator.setText(getString(R.string.goldIndicator) + playerStat[0]);
+    binding.reputationIndicator.setText(getString(R.string.reputationIndicator) + playerStat[1]);
+    binding.populationIndicator.setText(getString(R.string.populationIndicator) + playerStat[2]);
   }
   @Override
   public void onClick(View v) {
