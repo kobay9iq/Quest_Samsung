@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public class Player implements Serializable {
   private final String name;
-  private int gold = 4;
-  private int reputation = 2;
+  private int gold = 5;
+  private int reputation = 5;
   private int population = 5;
 
   public Player(String name) {

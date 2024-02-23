@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class GameController {
   private Player player;
@@ -11,7 +12,7 @@ public class GameController {
   private int currentScene;
 
   public GameController(String playerName, int numOfScenes, Context context)
-      throws FileNotFoundException {
+      throws IOException {
     player = new Player(playerName);
     scenes = new GameScene[numOfScenes];
     SceneSelector.createRandomScenes(scenes, context);

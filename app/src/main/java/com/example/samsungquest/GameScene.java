@@ -13,10 +13,33 @@ public class GameScene {
   public GameScene(Drawable picture, String[] strings, int[] choice1Effects, int[] choice2Effects) {
     this.picture = picture;
     this.description = strings[0];
-    this.choice1Str = strings[1];
-    this.choice2Str = strings[2];
     this.choice1Effects = choice1Effects;
     this.choice2Effects = choice2Effects;
+    this.choice1Str = addEffectsToStr(strings[1], choice1Effects);
+    this.choice2Str = addEffectsToStr(strings[2], choice2Effects);
+  }
+
+  private String addEffectsToStr(String str, int[] choiceEffects) {
+    String newStr = str;
+    for (int i = 0; i != choiceEffects.length; i++) {
+      if (choiceEffects[i] != 0) {
+        switch (i) {
+          case 0:
+            newStr += String.format("\nЗ: %d", choiceEffects[i]);
+            break;
+          case 1:
+            newStr += String.format("\nР: %d", choiceEffects[i]);
+            break;
+          case 2:
+            newStr += String.format("\nН: %d", choiceEffects[i]);
+            break;
+          default:
+            newStr += String.format("\n?: %d", choiceEffects[i]);
+            break;
+        }
+      }
+    }
+    return newStr;
   }
 
   public Drawable getPicture() {

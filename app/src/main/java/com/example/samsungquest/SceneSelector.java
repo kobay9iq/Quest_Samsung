@@ -1,19 +1,12 @@
 package com.example.samsungquest;
 
 import android.content.Context;
-import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import androidx.core.content.res.ResourcesCompat;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.Random;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 
 /*
 Создает n-ое рандомных количество сцен из пула, возвращает в GameContoller коллекцию с ними
@@ -21,7 +14,7 @@ import org.json.JSONObject;
 
 public class SceneSelector {
   private static final Integer SCENESINPOOL = 20;
-  public static void createRandomScenes(GameScene[] scenes, Context context) throws FileNotFoundException {
+  public static void createRandomScenes(GameScene[] scenes, Context context) throws IOException {
     Random random = new Random();
     Resources resources = context.getResources();
     String packageName = context.getPackageName();
@@ -31,20 +24,22 @@ public class SceneSelector {
       int sceneNum = random.nextInt(SCENESINPOOL - 1);
       int[][] choices;
       String[] strings;
-      Drawable drawable;
+
+      String path = "scenesPic/scene" + (sceneNum + 1) + ".jpg";
+      Drawable drawable = Util.getPicFromAssets(path, context);
 
 
-      int drawId = resources.getIdentifier("scene" + (sceneNum + 1), "drawable", packageName);
+      // int drawId = resources.getIdentifier("scene" + (sceneNum + 1), "drawable", packageName);
+
       // возможно, надо добавить "@strings/"
       // и поменять "array" на "strings" (или перетащить массивы строк в arrays.xml)
       int strId = resources.getIdentifier( "scene" + (sceneNum+1), "array", packageName);
 
-      if (strId != 0 && drawId != 0 && json != null) {
-        drawable = ResourcesCompat.getDrawable(resources, drawId, null);
+      if (strId != 0 && json != null) {
         strings = resources.getStringArray(strId);
         choices = JsonReader.processJsonString(json, sceneNum);
       } else {
-        throw new FileNotFoundException(String.format("Reading error. StrID:%d. drawID:%d.", strId, drawId));
+        throw new FileNotFoundException("Reading error. StrID:" + strId);
       }
 
       scenes[i] = new GameScene(drawable, strings, choices[0], choices[1]);

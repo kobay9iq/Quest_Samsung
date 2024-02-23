@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.samsungquest.databinding.ActivityGameBinding;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import org.w3c.dom.Text;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
@@ -28,6 +29,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     try {
       gameController = new GameController(playerName, SCENESNUM, this);
     } catch (FileNotFoundException e) {
+      Toast.makeText(this, "Something went wrong" + e, Toast.LENGTH_SHORT).show();
+      Log.e("Game activity",e.getMessage());
+      finish();
+    } catch (IOException e) {
       Toast.makeText(this, "Something went wrong" + e, Toast.LENGTH_SHORT).show();
       Log.e("Game activity",e.getMessage());
       finish();
