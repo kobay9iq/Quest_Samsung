@@ -1,8 +1,8 @@
 <resources>
-  <string name="app_name">SamsungQuest</string>
+  <string name="app_name">Перенос смут</string>
   <string name="button_start_game">Начать игру</string>
   <string name="hint_enter_hero_name">Введите имя героя</string>
-  <string name="game_name">Голый король</string>
+  <string name="game_name">Перенос смут\nБремя короля</string>
   <string name="emptyNameError">Вы не ввели имя вашего короля!</string>
   <string name="backToMenu">Вернуться в главное меню</string>
   <string name="goldIndicator">Золото\n</string>
