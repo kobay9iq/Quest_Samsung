@@ -21,11 +21,12 @@ public class SceneSelector {
     String json = JsonReader.readJsomFromAssets(context,"scenes.json");
 
     for (int i = 0; i < scenes.length; i++) {
+      // TODO: сделать защиту от повтора сцен
       int sceneNum = random.nextInt(SCENESINPOOL - 1);
       int[][] choices;
       String[] strings;
 
-      String path = "scenesPic/scene" + (sceneNum + 1) + ".jpg";
+      String path = "scenesPic/scene" + (sceneNum + 1) + ".jpeg";
       Drawable drawable = Util.getPicFromAssets(path, context);
 
 
@@ -42,7 +43,7 @@ public class SceneSelector {
         throw new FileNotFoundException("Reading error. StrID:" + strId);
       }
 
-      scenes[i] = new GameScene(drawable, strings, choices[0], choices[1]);
+      scenes[i] = new GameScene(drawable, strings, choices[0], choices[1], context);
     }
   }
 }

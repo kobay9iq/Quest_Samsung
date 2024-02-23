@@ -9,4 +9,7 @@
   <string name="reputationIndicator">Любовь народа\n</string>
   <string name="populationIndicator">Население\n</string>
   <string name="endingAppeal">Мой король, |...</string>
+  <string name="goldStr">\nЗ: </string>
+  <string name="repStr">\nЛ: </string>
+  <string name="popStr">\nН: </string>
 </resources>

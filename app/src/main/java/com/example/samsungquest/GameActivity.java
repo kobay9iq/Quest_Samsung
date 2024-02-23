@@ -49,6 +49,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
   super.onStart();
   try {
     binding.button1.setOnClickListener(this);
+    binding.button2.setOnClickListener(this);
   } catch (ArrayIndexOutOfBoundsException e) {
     Log.e("Game activity", "ArrayIndexOutOfBoundsException");
     Toast.makeText(this, "Something went wrong" + e, Toast.LENGTH_SHORT).show();

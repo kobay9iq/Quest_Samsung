@@ -2,5 +2,6 @@
 <resources>
   <color name="black">#FF000000</color>
   <color name="white">#FFFFFFFF</color>
+  <color name="shadowText">#BD8700</color>
   <color name="statsBackground">#5c4200</color>
 </resources>

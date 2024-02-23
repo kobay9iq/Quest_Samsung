@@ -35,7 +35,7 @@ public class EndingSelector {
 
     str = context.getResources().getStringArray(R.array.ends)[endID-1];
 
-    String path = "endingPic/end" + endID + ".jpg";
+    String path = "endingPic/end" + endID + ".jpeg";
         pic = Util.getPicFromAssets(path, context);
   }
 

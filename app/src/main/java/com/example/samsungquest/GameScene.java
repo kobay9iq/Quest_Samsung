@@ -1,5 +1,6 @@
 package com.example.samsungquest;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 
 public class GameScene {
@@ -9,9 +10,11 @@ public class GameScene {
   private final int[] choice1Effects;
   private final String choice2Str;
   private final int[] choice2Effects;
+  private final Context context;
 
-  public GameScene(Drawable picture, String[] strings, int[] choice1Effects, int[] choice2Effects) {
+  public GameScene(Drawable picture, String[] strings, int[] choice1Effects, int[] choice2Effects, Context context) {
     this.picture = picture;
+    this.context = context;
     this.description = strings[0];
     this.choice1Effects = choice1Effects;
     this.choice2Effects = choice2Effects;
@@ -25,13 +28,13 @@ public class GameScene {
       if (choiceEffects[i] != 0) {
         switch (i) {
           case 0:
-            newStr += String.format("\nЗ: %d", choiceEffects[i]);
+            newStr += context.getString(R.string.goldStr) + choiceEffects[i];
             break;
           case 1:
-            newStr += String.format("\nР: %d", choiceEffects[i]);
+            newStr += context.getString(R.string.repStr) + choiceEffects[i];
             break;
           case 2:
-            newStr += String.format("\nН: %d", choiceEffects[i]);
+            newStr += context.getString(R.string.popStr) + choiceEffects[i];
             break;
           default:
             newStr += String.format("\n?: %d", choiceEffects[i]);
