@@ -47,7 +47,6 @@
     android:layout_marginTop="25dp"
     android:layout_below="@id/image_view"
     android:layout_centerHorizontal="true"
-    android:padding="16dp"
     android:gravity="center"
     android:text="null"
     android:shadowDx="3"
